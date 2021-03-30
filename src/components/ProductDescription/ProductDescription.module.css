@@ -1,0 +1,41 @@
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  font-family: Roboto;
+}
+
+.productContent {
+  display: flex;
+  margin-top: 40px;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: animLeft 0.3s forwards;
+}
+
+.productImage img {
+  width: 300px;
+  border-radius: 10px;
+  display: block;
+}
+
+.productDescription {
+  margin-left: 40px;
+}
+
+.productPrice {
+  background: rgb(146, 248, 88);
+  padding: 5px 1px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 400;
+  color: #555;
+  font-size: 14px;
+  width: 100px;
+}
+
+@keyframes animLeft {
+  to {
+    opacity: initial;
+    transform: initial;
+  }
+}

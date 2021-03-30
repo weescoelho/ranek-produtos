@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.container{
+  max-width: 680px;
+  margin: 0 auto;
+  font-family: Roboto;
+}
+
+.productContainer{
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  column-gap: 10px;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: animLeft 0.3s forwards;
+}
+
+@keyframes animLeft {
+  to {
+    opacity: initial;
+    transform: initial;
+  }
+}
+
+.link{
+  text-decoration: none;
+  color:#000;
+  font-weight: bold;
+}

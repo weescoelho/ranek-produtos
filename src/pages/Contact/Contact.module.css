@@ -1,0 +1,44 @@
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  font-family: Roboto;
+}
+
+.contentContainer {
+  display: flex;
+  margin-top: 40px;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: animLeft .3s forwards;
+}
+
+@keyframes animLeft {
+  to {
+    opacity: initial;
+    transform: initial;
+  }
+}
+
+.contentDescription{
+  margin-left: 40px;
+}
+
+.contentDescription p{
+  position:relative;
+}
+
+.contentDescription p::before{
+  content:'';
+  width: 8px;
+  height: 2px;
+  display: block;
+  background-color: #ddd;
+  position: absolute;
+  top:8px;
+  left:-10px;
+}
+
+.contentContainer img {
+  width: 300px;
+  border-radius: 10px;
+}
