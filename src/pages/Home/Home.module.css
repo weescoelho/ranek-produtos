@@ -28,3 +28,14 @@
   color:#000;
   font-weight: bold;
 }
+
+@media (max-width:739px){
+  .container{
+    max-width: 300px;
+    margin:0 auto;
+  }
+  .productContainer{
+    display: flex;
+    flex-direction: column;
+  }
+}

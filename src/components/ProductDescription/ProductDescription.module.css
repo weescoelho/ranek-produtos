@@ -39,3 +39,18 @@
     transform: initial;
   }
 }
+
+@media (max-width:739px){
+  .container {
+    max-width: 300px;
+    margin: 0 auto;
+    font-family: Roboto;
+  }
+  .productContent {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .productDescription {
+    margin-left: 0px;
+  }
+}
