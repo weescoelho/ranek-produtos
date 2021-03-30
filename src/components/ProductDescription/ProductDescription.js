@@ -18,7 +18,7 @@ const ProductDescription = () => {
       setLoading(false);
     };
     fetchProduct();
-  }, []);
+  }, [params.id]);
 
   return (
     <section className={styles.container}>
