@@ -18,7 +18,7 @@ const Button = styled.button`
 
 const Header = () => {
   return (
-    <nav>
+    <nav style={{marginTop:'40px'}}>
       <NavLink to="/">
         <Button>Produtos</Button>
       </NavLink>

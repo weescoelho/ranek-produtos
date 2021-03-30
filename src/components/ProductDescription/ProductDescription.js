@@ -1,10 +1,11 @@
 import React from "react";
 import { useParams } from "react-router";
 import { productFetch } from "../../services/ranekApi.js";
+import Head from "../Head/Head.js";
 import Header from "../Header/Header.js";
 import styles from "./ProductDescription.module.css";
 
-const ProductDescription = ({ id }) => {
+const ProductDescription = () => {
   const params = useParams();
   const [dataProduct, setDataProduct] = React.useState();
   const [loading, setLoading] = React.useState(false);
@@ -21,8 +22,18 @@ const ProductDescription = ({ id }) => {
 
   return (
     <section className={styles.container}>
+      <Head
+        title={`Ranek | ${dataProduct && dataProduct.nome}`}
+        description="Página de produtos"
+      />
       <Header />
-      {loading && <img style={{width:'50px', marginTop:'50px'}}src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" alt="loading"/> }
+      {loading && (
+        <img
+          style={{ width: "50px", marginTop: "50px" }}
+          src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif"
+          alt="loading"
+        />
+      )}
       {dataProduct && (
         <div className={styles.productContent}>
           <div className={styles.productImage}>
